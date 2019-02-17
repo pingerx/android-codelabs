@@ -17,16 +17,13 @@ class NumsCount {
 
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val result = hashSetOf<Int>()
-        nums.forEachIndexed { x, it1 ->
-            nums.forEachIndexed { y, it2 ->
-                if ((it1 != it2) && (it1 + it2 == target)) {
-                    result.add(x)
-                    result.add(y)
-                    return@forEachIndexed
+        for (i in 0 until nums.size) {
+            for (j in i until nums.size) {
+                if (nums[i] != nums[j] && nums[i] + nums[j] == target) {
+                    result.add(i)
+                    result.add(j)
                 }
-
             }
-
         }
         return result.toIntArray().sortedArray()
     }
