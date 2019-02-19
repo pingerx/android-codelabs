@@ -11,7 +11,7 @@ fun main() {
     println("---------------------")
 
     val data = NumsCount()
-    val twoSum = data.twoSum(intArrayOf(2, 5, 15, 19, 34, 78, 91), 93)
+    val twoSum = data.twoSum(intArrayOf(5, 5, 15, 19, 34, 78, 91), 10)
     twoSum.forEach {
         println("--------> $it")
     }

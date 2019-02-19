@@ -18,8 +18,8 @@ class NumsCount {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val result = hashSetOf<Int>()
         for (i in 0 until nums.size) {
-            for (j in i until nums.size) {
-                if (nums[i] != nums[j] && nums[i] + nums[j] == target) {
+            for (j in i + 1 until nums.size) {
+                if (nums[i] + nums[j] == target) {
                     result.add(i)
                     result.add(j)
                 }
